@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fl.dao.UserDao">
+    <!--<insert id="addDept" parameterType="com.f1.pojo.dept">-->
+    <!--insert into dept (dname, db_source) values-->
+    <!--(#{dname},DATABASE());-->
+    <!--</insert>-->
+    <!--<select id="queryone" resultType="com.f1.pojo.dept" parameterType="java.lang.Integer">-->
+    <!--select * from dept where deptno=#{deptno};-->
+    <!--</select>-->
+    <select id="queryall" resultType="com.fl.pojo.User">
+        select * from db2.t_user;
+    </select>
+    <select id="login" resultType="com.fl.pojo.User" >
+        select  * from db2.t_user where username=#{username} and password=#{password};
+    </select>
+</mapper>
