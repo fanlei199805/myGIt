@@ -1,0 +1,85 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/catalog/catalog",
+    "pages/search/search",
+    "pages/special/special",
+    "pages/specialDetail/specialDetail",
+    "pages/car/car",
+    "pages/productDetail/productDetail",
+    "pages/shopping/checkout/checkout",
+    "pages/shopping/address/address",
+    "pages/shopping/addressAdd/addressAdd",
+    "pages/payResult/payResult",
+    "pages/ucenter/index/index",
+    "pages/ucenter/download/download",
+    "pages/ucenter/address/address",
+    "pages/ucenter/addressAdd/addressAdd",
+    "pages/ucenter/order/order",
+    "pages/ucenter/orderDetail/orderDetail",
+    "pages/ucenter/collect/collect",
+    "pages/ucenter/help/help",
+    "pages/ucenter/helpInfo/helpInfo",
+    "pages/ucenter/feedback/feedback",
+    "pages/ucenter/involved/involved",
+    "pages/ucenter/create/create",
+    "pages/ucenter/detail/detail",
+    "pages/auth/btnAuth/btnAuth",
+    "pages/explain/explain",
+    "pages/logs/logs",
+    "pages/org",
+    "pages/commentPost/commentPost",
+    "pages/topicComment/topicComment",
+    "pages/org/org",
+    "pages/topicRedact/topicRedact"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f6f6f6",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#969696",
+    "selectedColor": "#FF623D",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/img/home.png",
+        "selectedIconPath": "static/img/homePitch.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/special/special",
+        "iconPath": "static/img/special.png",
+        "selectedIconPath": "static/img/specialPitch.png",
+        "text": "资讯"
+      },
+      {
+        "pagePath": "pages/catalog/catalog",
+        "iconPath": "static/img/ic_menu_sort_nor.png",
+        "selectedIconPath": "static/img/ic_menu_sort_pressed.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/car/car",
+        "iconPath": "static/img/shoppingCar.png",
+        "selectedIconPath": "static/img/shoppingCarPitch.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/ucenter/index/index",
+        "iconPath": "static/img/mine.png",
+        "selectedIconPath": "static/img/minePitch.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

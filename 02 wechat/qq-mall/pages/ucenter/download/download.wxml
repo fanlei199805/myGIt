@@ -1,0 +1,3 @@
+<view class="container">
+  <web-view src="https://fastweb.guotongshiyou.com/down_load/gt_app"></web-view>
+</view>

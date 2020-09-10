@@ -1,0 +1,21 @@
+<view class="container">
+  <picker bindchange="bindPickerChange" mode="selector" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      <view class="fb-type">
+        <view class="type-label">{{array[index]}}</view>
+        <image class="type-icon" src="../../../static/img/down.png"></image>
+      </view>
+    </view>
+  </picker>
+  <view class='questionText'>意见问题</view>
+  <view class="fb-body">
+    <textarea class="content" placeholder="对于我们的网站、商品、服务，您还有什么建议吗？您还有什么商品需求？请告诉我们…" placeholder-style="color: #9b9b9b;"  bindinput ="contentInput" maxlength="200" auto-focus="true" value="{{content}}"/>
+    <view class="text-count">{{contentLength}}/200</view>
+  </view>
+  <view class="questionText">联系电话</view>
+  <view class="fb-mobile">
+    <input class="mobile" maxlength="11" type="number" placeholder="输入您的手机号码，方便我们与您联系" placeholder-style="color: #9b9b9b;" bindinput ="mobileInput" value="{{mobile}}"/>
+  </view>
+
+  <view class="fb-btn" bindtap="sbmitFeedback">提交</view>
+</view>

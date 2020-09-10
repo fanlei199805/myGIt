@@ -1,0 +1,286 @@
+
+.select_one {
+    height: 60rpx;
+    line-height: 60rpx;
+    border-top: 1px solid black;
+}
+.select_box {
+    background-color: #eee;
+    margin-left: 11.6%;
+    width: 280rpx;
+    position: absolute;
+    top: 60rpx;
+    z-index: 1;
+    overflow: hidden;
+    animation: myfirst 0.5s;
+}
+.list-msg1 {
+    height: 60rpx;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid  #ccc;
+    padding: 0 10rpx;
+}
+.list-msg2 {
+    height: 20rpx;
+    width:220rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 8rpx;
+    margin-left: 8%;
+}
+.list-msg2 .left{
+    margin-left: 30rpx;
+    height: 33rpx;
+    line-height: 33rpx;
+    font-size: 30rpx;
+    float: right;
+}
+.com-sImg{
+    position: absolute;
+    width: 16px;
+    height: 9px;
+}
+.com-sIm1{
+    position: absolute;
+    width: 22px;
+    height: 20px;
+    margin-left: -30rpx;
+}
+
+.list-msg2 .right{
+    margin-top: 28rpx;
+    margin-left: -20rpx;
+    height: 43rpx;
+    line-height: 43rpx;
+    float: left;
+}
+.list-msg1 .search {
+  height: 58rpx;
+  width:350rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.search .input {
+  width:900rpx;
+  height: 56rpx;
+  background:#eee;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search .icon {
+  background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/search2-2fb94833aa.png) center no-repeat;
+  background-size: 100%;
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.search .txt {
+  height: 42rpx;
+  line-height: 42rpx;
+  color: #666;
+  padding-left: 10rpx;
+  font-size: 30rpx;
+}
+
+.swiper, .swiper swiper, .bannerImg {
+  width: 100%;
+  height: 417rpx;
+}
+.advantage {
+  width: 100%;
+  height: 395rpx;
+  position: relative;
+}
+
+.advantageText {
+  width: 545rpx;
+  height: 26rpx;
+  position: absolute;
+  top: 40rpx;
+  left: 50%;
+  margin-left: -272.5rpx;
+}
+
+.advantages {
+  width: 100%;
+  margin-top: 96rpx;
+  display: flex;
+}
+
+.adv {
+  flex: 1;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advImg {
+  width: 105rpx;
+  height: 98rpx;
+}
+
+.advText {
+  width: 100%;
+  text-align: center;
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 14rpx;
+}
+
+.userExplain {
+  width: 89.066667%;
+  height: 100rpx;
+  position: absolute;
+  left: 5.466667%;
+  bottom: 30rpx;
+}
+
+.newProduct {
+  width: 100%;
+}
+
+.newProductCaption {
+  width: 100%;
+  height: 85rpx;
+  position: relative;
+}
+
+.newIcon {
+  width: 33rpx;
+  height: 39rpx;
+  position: absolute;
+  top: 23rpx;
+  left: 30rpx;
+}
+
+.newText {
+  position: absolute;
+  top: 0;
+  left: 77rpx;
+  height: 85rpx;
+  line-height: 85rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.hotProduct {
+  width: 100%;
+}
+
+.hotProductCaption {
+  width: 100%;
+  height: 85rpx;
+  position: relative;
+  border-bottom: 1rpx #e7e7e7 solid;
+}
+
+.hotIcon {
+  width: 33rpx;
+  height: 39rpx;
+  position: absolute;
+  top: 23rpx;
+  left: 30rpx;
+}
+
+.hotText {
+  position: absolute;
+  top: 0;
+  left: 77rpx;
+  height: 85rpx;
+  line-height: 85rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.hotProductBox {
+  width: 96%;
+  float: right;
+}
+
+.hotList {
+  width: 100%;
+  height: 265rpx;
+  border-top: 1rpx #e7e7e7 solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hotList:first-child {
+  border: 0;
+}
+
+.hotListIcon {
+  width: 28.333333%;
+  height: 206rpx;
+}
+
+.rightContent {
+  width: 67.083333%;
+  height: 100%;
+  position: relative;
+}
+
+.hotListName {
+  height: 68rpx;
+  padding-right: 30rpx;
+  font-size: 26rpx;
+  color: #333;
+  position: absolute;
+  top: 45rpx;
+  left: 0;
+}
+
+.hotListOldPrize {
+  display: table;
+  width: auto;
+  height: 42rpx;
+  line-height: 42rpx;
+  padding: 0 12rpx;
+  background: #FFF0ED;
+  border-radius: 21rpx;
+  font-size: 24rpx;
+  color: #FF4800;
+  position: absolute;
+  top: 125rpx;
+  left: 0;
+}
+
+.hotListPrize {
+  font-size: 36rpx;
+  color: #FA0201;
+  position: absolute;
+  bottom: 46rpx;
+  left: 0;
+}
+
+.noMore {
+  width: 100%;
+  height: 74rpx;
+  line-height: 74rpx;
+  text-align: center;
+  background: #f6f6f6;
+  font-size: 24rpx;
+  color: #999;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.noMoreText {
+  width: 100%;
+  text-align: center;
+}

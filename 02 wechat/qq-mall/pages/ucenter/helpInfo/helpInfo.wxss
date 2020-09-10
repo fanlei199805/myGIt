@@ -1,0 +1,11 @@
+page {
+  background: #f8f8f8;
+}
+
+text {
+  width: 92%;
+  text-align: left;
+  padding: 30rpx;
+  font-size: 28rpx;
+  color: #333;
+}

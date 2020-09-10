@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "51惠购",
+  "usingComponents": {
+    "newProductComponent": "/component/show-product-list/show-product-list"
+  },
+  "component": true
+}

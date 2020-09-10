@@ -1,0 +1,467 @@
+page {
+  background: #F8F8F8;
+}
+
+.banner {
+  width: 100%;
+  height: 240rpx;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.infos{
+  width: 100%;
+  height: 300rpx;
+  margin-top: 30%;
+  font-family: "微软雅黑";
+  font-size:35rpx;
+}
+.ordercss{
+  margin-top: 30%;
+  margin-left: -33%;
+}
+
+.userHead {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-left: 30rpx;
+  margin-top: 60rpx;
+}
+
+.midBox {
+  flex: 1;
+  margin-left: 20rpx;
+  margin-top: 60rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.logout {
+  flex: 1;
+  font-size: 28rpx;
+  color: #9B9B9B;
+  text-decoration: underline;
+  margin-top: 67rpx;
+}
+
+.username {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #000;
+}
+
+.sdl {
+  font-size: 32rpx;
+  color: #4a4a4a;
+}
+
+.ykyh {
+  width: 200rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 25rpx;
+  background: #FFECE7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14rpx;
+}
+
+.ykyh image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 24rpx;
+}
+
+.ykyh text {
+  margin-right: 22rpx;
+  font-size: 28rpx;
+  color: #FF623D;
+}
+
+.focuswx {
+  width: 100%;
+  height: 220rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.wxFocus {
+  width: 92%;
+  height: 168rpx;
+  margin: 26rpx auto;
+}
+
+.focusBox {
+  width: 92%;
+  height: 160rpx;
+  border-radius: 10rpx;
+  border: 1rpx #C9C9C9 solid;
+  position: relative;
+  margin: 30rpx auto;
+}
+
+.logo {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 60rpx;
+  left: 30rpx;
+}
+
+.focusText1 {
+  font-size: 24rpx;
+  color: #9B9B9B;
+  position: absolute;
+  top: 15rpx;
+  left: 30rpx;
+}
+
+.focusText2 {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #000;
+  position: absolute;
+  top: 60rpx;
+  left: 139rpx;
+}
+
+.focusText3 {
+  font-size: 28rpx;
+  color: #4A4A4A;
+  position: absolute;
+  top: 105rpx;
+  left: 139rpx;
+}
+
+.focusbtn {
+  width: 140rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  border: 1rpx #44B343 solid;
+  font-size: 28rpx;
+  color: #44B343;
+  position: absolute;
+  top: 50rpx;
+  right: 30rpx;
+}
+
+.user-menu {
+  width: 100%;
+  height: 540rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.user-menu .item {
+  float: left;
+  width: 33.333333333%;
+  height: 180rpx;
+  text-align: center;
+}
+
+.item .a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.a image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.user-menu .txt {
+  display: block;
+  font-size: 24rpx;
+  color:#000;
+}
+
+.service {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: left;
+  line-height: normal;
+  display: inline;
+}
+
+.footer {
+  width: 100%;
+  height: 165rpx;
+  background: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.company {
+  font-family: STXingkai;
+  font-size:20rpx;
+  text-align:center;
+  color: #9B9B9B;
+  margin-top: 40rpx;
+}
+
+.version {
+  font-family: STXingkai;
+  font-size:25rpx;
+  text-align:center;
+  color: #9B9B9B;
+  margin-top: 10rpx;
+}
+.orderBox1 {
+  width: 92%;
+  height: 84rpx;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statusText {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.orderStatus {
+  font-size: 28rpx;
+  color: #333;
+  text-align: right;
+}
+
+.countDown {
+  padding-top: 15rpx;
+  height: 84rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.countTime {
+  font-size: 20rpx;
+  color: #666;
+}
+
+.orderBox2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.commoditys {
+  width: 100%;
+  height: 208rpx;
+  position: relative;
+}
+
+.commoditys image {
+  width: 144rpx;
+  height: 146rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+}
+
+.name {
+  font-size: 26rpx;
+  color: #333;
+  position: absolute;
+  top: 32rpx;
+  left: 200rpx;
+}
+
+.price {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #FA0201;
+  position: absolute;
+  top: 130rpx;
+  left: 199rpx;
+}
+
+.number {
+  font-size: 28rpx;
+  color: #999;
+  position: absolute;
+  top: 133rpx;
+  right: 30rpx;
+}
+
+.priceBox {
+  width: 100%;
+  height: 84rpx;
+  border-top: 1rpx #f8f8f8 solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.payText {
+  font-size: 28rpx;
+  color: #666;
+  margin-left: 30rpx;
+}
+
+.prices {
+  font-size: 30rpx;
+  color: #FA0201;
+  margin-right: 30rpx;
+}
+
+.orderBox3 {
+  width: 100%;
+  height: 126rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addressBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 42rpx;
+}
+
+.namePhone {
+  width: 100%;
+  font-size: 28rpx;
+  color: #333;
+  text-align: left;
+}
+
+.addressDetail {
+  width: 100%;
+  font-size: 26rpx;
+  color: #666;
+  text-align: left;
+}
+
+.orderBox3 image {
+  width: 14rpx;
+  height: 24rpx;
+  margin-right: 30rpx;
+}
+
+.orderBox4 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 98rpx;
+}
+
+.orderBox4 .caption {
+  margin: 30rpx 30rpx 10rpx 30rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.orderBox4 text {
+  margin: 5rpx 30rpx 5rpx 30rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.orderBox4 .infos {
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx 0;
+}
+
+.orderBox5 {
+  width: 100%;
+  height: 98rpx;
+  border-top: 1rpx #f8f8f8 solid;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+}
+
+.btn1 {
+  height: 52rpx;
+  line-height: 52rpx;
+  text-align: center;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+  color: #666;
+  position: absolute;
+  top: 24rpx;
+  right: 212rpx;
+}
+
+.btn2 {
+  height: 52rpx;
+  line-height: 52rpx;
+  text-align: center;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background: #FF5B34;
+  position: absolute;
+  top: 24rpx;
+  right: 32rpx;
+}
+.button-sp-area{
+  padding-top: 8px;
+  margin: 0 auto;
+  width: 80%;
+}
+.money{
+  color: red;
+  font-size: initial;
+}
+.button-sp-area image{
+  margin-top: 5%;
+  width: 35px;
+  height: 30px;
+}
+.btnc {
+  height: 52rpx;
+  line-height: 52rpx;
+  text-align: center;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+  color: #FF5B34;
+  background: #FF5B34;
+  position: absolute;
+  top: 24rpx;
+  right: 32rpx;
+}
+
+.btn3 {
+  height: 52rpx;
+  line-height: 52rpx;
+  text-align: center;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+  color: #666;
+  position: absolute;
+  top: 24rpx;
+  right: 32rpx;
+}
+.canvas-box {
+  height: 840rpx;
+  width: 686rpx;
+}
+.canvas-box canvas{
+  margin-left: 15%;
+}
+.canvas-box text{
+  font-family: "微软雅黑";
+  font-weight: 100;
+  text-align: center;
+  margin-left: 22%;
+}

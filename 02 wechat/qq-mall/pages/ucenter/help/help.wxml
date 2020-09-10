@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="list-group">
+    <navigator url="../helpInfo/helpInfo?info={{item.answer}}" class="list-cell" wx:for="{{helpList}}" wx:key="{{index}}">
+      <view class="list-label">{{item.question}}</view>
+      <image class='right' src='../../../static/img/right2.png'></image>
+    </navigator>
+  </view>
+</view>

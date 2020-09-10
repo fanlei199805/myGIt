@@ -1,0 +1,75 @@
+<view class="container">
+  <view class='orderBox1'>
+    <text class='statusText'>订单状态</text>
+    <view class='countDown' wx:if="{{orderInfo.orderStatus==0&&!overTime}}">
+      <text class='orderStatus'>{{status}}</text>
+      <text class='countTime'>{{countTime}}秒后订单自动关闭</text>
+    </view>
+    <text class='orderStatus' wx:else>{{status}}</text>
+  </view>
+  <view class='h20'></view>
+  <view class='orderBox2'>
+    <view class='commoditys' wx:for="{{orderInfo.orderGoodsVOS}}" wx:key="item.goodsId">
+      <image src='{{item.primaryPicUrl}}' mode='aspectFit'></image>
+      <text class='name'>{{item.goodsName}}</text>
+      <text class='price'>￥{{item.retailPrice}}</text>
+      <text class='number'>X{{item.number}}</text>
+    </view>
+      <!--  <view class='orderBox3' wx:if="{{item.isReal==1}}">
+      <image src='{{item.primaryPicUrl}}'></image>
+    </view>-->
+    <view class='priceBox'>
+      <text class='payText'>{{statusPay}}</text>
+      <text class='prices'>￥{{orderInfo.goodsPrice}}</text>
+    </view>
+  </view>
+  <view class='h20'></view>
+  <view class='orderBox3' wx:if="{{orderInfo.province}}" bindtap='{{orderInfo.orderStatus == 0 ? "goAddress" : ""}}'>
+    <view class='addressBox'>
+      <text class='namePhone'>{{orderInfo.consignee}} {{orderInfo.mobile}}</text>
+      <text class='addressDetail'>{{orderInfo.province+orderInfo.city+orderInfo.district+orderInfo.address}}</text>
+    </view>
+    <image src='../../../static/img/right3.png' wx:if="{{orderInfo.orderStatus == 0}}"></image>
+  </view>
+  <view class='h20'></view>
+  <view class='orderBox4'>
+    <view class='caption'>订单详情</view>
+    <text>订单编号：{{orderInfo.orderSN}}</text>
+    <text wx:if="{{orderInfo.orderStatus == 4 || orderInfo.orderStatus == 5}}">商品信息：</text>
+    <!-- <view class='infos' wx:for="{{orderInfo.list}}" wx:if="{{orderInfo.orderStatus == 4 || orderInfo.orderStatus == 5}}">
+      <text>名称：{{item.goodsName}}</text>
+      <text>卡号：{{item.cardno}}</text>
+      <text>密码：{{item.cardpsd}}</text>
+    </view> -->
+    <text>创建时间：{{createTime}}</text>
+    <text wx:if="{{orderInfo.orderStatus == 1 || orderInfo.orderStatus == 3 || orderInfo.orderStatus == 4 || orderInfo.orderStatus == 5}}">支付时间：{{payTime}}</text>
+    <text wx:if="{{orderInfo.orderStatus == 4 || orderInfo.orderStatus == 5}}">发货时间：{{sendTime}}</text>
+    <!-- <text wx:if="{{orderInfo.orderStatus == 5}}">成交时间：{{confirmTime}}</text> -->
+
+  </view>
+      <view class="mask"></view>
+<view class="canvas-box" wx:if="{{isReal==1&&orderInfo.orderStatus==4}}">
+    <!-- <view>
+    <canvas style=" height: 470rpx;" canvas-id="mycanvas" />
+    </view> -->
+    <view > 
+    <canvas style="width: 200px;height: 200px;" canvas-id="mycanvas" />
+    </view>
+</view>
+<view wx:if="{{isReal==0}}">
+<text style="text-align: center;">该商品暂不提供二维码线下消费扫描</text>
+</view>
+<view wx:if="{{isReal==1&&orderInfo.orderStatus==5}}">
+<text style="text-align: center;">该商品已完成验证，不再提供二维码</text>
+</view>
+<view wx:if="{{isReal==1&&orderInfo.orderStatus==4}}" class="cs">
+<text style="text-align: center;">消费时,提供商家扫码验证</text>
+</view>
+
+  <view class='orderBox5'>
+    <button class="btn1" catchtap="cancelOrder" wx:if="{{orderInfo.orderStatus == 0}}">取消订单</button>
+    <button class="btn2" catchtap="payOrder" wx:if="{{orderInfo.orderStatus == 0}}">去付款</button>
+    <button class="btn3" catchtap="delOrder" wx:if="{{orderInfo.orderStatus == 2}}">删除订单</button>
+  </view>
+
+</view>

@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="address-box {{thisH}}" wx:if="{{!isReal}}">
+    <view class="address-item" bindtap="selectAddress" wx:if="{{hasAddress}}">
+      <view class="l">
+        <text class="name">{{checkedAddress.userName}}</text>
+        <text class="mobile">{{checkedAddress.telNumber}}</text>
+        <image class='default' wx:if="{{checkedAddress.isDefault == 0}}" src="/static/img/default.png"></image>
+      </view>
+      <view class="m">{{checkedAddress.provinceName+checkedAddress.cityName+checkedAddress.ountyName+checkedAddress.detailInfo}}</view>
+      <image class='r' src="../../../static/img/right3.png"></image>
+    </view>
+    <view class="address-empty" bindtap="addAddress" wx:if="{{!hasAddress}}">
+      <view class="m">没有添加地址信息，请点击添加地址</view>
+      <image src="../../../static/img/right3.png"></image>
+    </view>
+  </view>
+  <view class="goods-items">
+    <view class='detailText'>商品详情</view>
+    <view class="item" wx:for="{{checkedGoodsList}}" wx:key="{{item.goodsId}}">
+      <image src="{{item.primaryPicUrl}}" mode='aspectFit'></image>
+      <text class="name noline2">{{item.goodsName}}</text>
+      <view class="b">￥{{item.retallPrice}}</view>
+      <text class="number">x{{item.number}}</text>
+    </view>
+  </view>
+  <view class="order-box">
+    <view class="order-item">
+      <view class="l">商品合计</view>
+      <view class="r">￥{{priceTotal}}</view>
+    </view>
+  </view>
+  <view class="order-total">
+    <view class="l">合计：<text class='priceTotal'>￥{{priceTotal}}</text></view>
+    <view class="r" bindtap="{{isFirstAction ? 'submitOrder' : ''}}">提交订单</view>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+<view class="container">
+  <view class='navBox'>
+    <view class='nav {{thisType == "-100" ? "active" : ""}}' catchtap='getThisList' data-type="-100">全部</view>
+    <view class='nav {{thisType == "0" ? "active" : ""}}' catchtap='getThisList' data-type="0">待付款</view>
+    <view class='nav {{thisType == "3" ? "active" : ""}}' catchtap='getThisList' data-type="3">待发货</view>
+    <view class='nav {{thisType == "4" ? "active" : ""}}' catchtap='getThisList' data-type="4">已发货</view>
+    <view class='nav {{thisType == "5" ? "active" : ""}}' catchtap='getThisList' data-type="5">已完成</view>
+  </view>
+  <view class="orders">
+    <navigator url="../orderDetail/orderDetail?id={{item.orderId}}" class="order" wx:for="{{orderList}}" wx:key="{{item.orderId}}">
+      <view class="h">
+        <view class="l">订单编号：{{item.orderSN}}</view>
+        <view class="r">{{item.orderStatusText}}</view>
+      </view>
+      <view class="goods" wx:for="{{item.orderGoodsVOS}}" wx:for-item="gitem" wx:key="{{gitem.goodsId}}">
+        <image src="{{gitem.primaryPicUrl}}" mode='aspectFit'></image>
+        <text class="name noline2">{{gitem.goodsName}}</text>
+        <text class="price">￥{{gitem.retailPrice}}</text>
+        <text class="number">X{{gitem.number}}</text>
+      </view>
+      <view class="b">
+        <view class="l">{{item.orderStatus == 0 || item.orderStatus == 2 ? '应付' : '已付'}}：￥{{item.goodsPrice}}</view>
+        <view class="r">
+          <button class="btn1" data-order-index="{{index}}" catchtap="cancelOrder" wx:if="{{item.orderStatus == 0}}">取消订单</button>
+          <button class="btn2" data-order-index="{{index}}" catchtap="payOrder" wx:if="{{item.orderStatus == 0}}">去付款</button>
+          <button class="btn3" data-order-index="{{index}}" catchtap="delOrder" wx:if="{{item.orderStatus == 2}}">删除订单</button>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class="loadmore" wx:if="{{orderList.length > 5}}">
+    <block wx:if="{{nomore}}">
+      <text>{{nomoreText}}</text>
+    </block>
+    <block wx:else>
+      <text class="iconfont icon-loading loading" space="nbsp"></text>
+      <text>{{loadmoreText}}</text>
+    </block>
+  </view>
+</view>

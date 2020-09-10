@@ -1,0 +1,61 @@
+page {
+  background: #fff;
+}
+
+.pay-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pay-result image {
+  width: 150rpx;
+  height: 150rpx;
+  position: absolute;
+  top: 175rpx;
+  left: 50%;
+  margin-left: -75rpx;
+}
+
+.pay-result .msg {
+  width: 100%;
+  text-align: center;
+  color: #333;
+  font-size: 40rpx;
+  margin-top: 369rpx;
+}
+
+.pay-result .tips {
+  width: 100%;
+  text-align: center;
+  color: #999;
+  font-size: 26rpx;
+  margin-top: 35rpx;
+}
+
+.pay-result .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 69rpx;
+}
+
+.pay-result .btn {
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 0 39rpx;
+  width: 206rpx;
+  font-size: 28rpx;
+  border-radius: 4rpx;
+}
+
+.btnColor1 {
+  color: #666;
+  border: 1rpx solid #ddd;
+}
+
+.btnColor2 {
+  background: #FF5B34;
+  color: #fff;
+}

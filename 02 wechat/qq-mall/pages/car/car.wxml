@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="no-cart" wx:if="{{cartGoods.length <= 0}}">
+    <!-- <image class='noCartTop' src='../../static/img/noCartTop.png'></image> -->
+    <view class="services">
+      <view class="servicesItem">{{servers.firstField}}</view>
+      <view class="servicesItem">{{servers.secondField}}</view>
+      <view class="servicesItem">{{servers.thirdField}}</view>
+    </view>
+    <image class='bigCar' src='../../static/img/bigCar.png'></image>
+    <view class="title-box">购物车竟然是空的</view>
+    <view class="to-index-btn" bindtap="toIndexPage">去首页逛逛</view>
+  </view>
+  <view class="cart-view" wx:if="{{cartGoods.length > 0}}">
+    <view class='allGoods'>
+      <view class="checkbox {{checkedAllStatus ? 'checked' : ''}}" bindtap="checkedAll">全部商品</view>
+      <view class="allGoodsEdit" bindtap="editCart">{{!isEditCart ? '编辑' : '完成'}}</view>
+    </view>
+    <view class="list">
+      <view class="group-item">
+        <view class="goods">
+          <view class="item {{isEditCart ? 'edit' : ''}}" wx:for="{{cartGoods}}" wx:key="{{item.id}}" data-item-index="{{index}}" id="{{item.goods_ID}}" bindtap="openGoods" bindtouchstart="touchStart" bindtouchend="touchEnd">
+            <view class="checkbox {{item.checked ? 'checked' : ''}}" catchtap="checkedItem" data-item-index="{{index}}" wx:if="{{item.status == 1}}"></view>
+            <image class="loseTip" src="../../static/img/lose.png" wx:if="{{item.status == 0}}"></image>
+            <image class="img" src="{{item.list_PIC_URL}}" mode='aspectFit'></image>
+            <text class="name noline2">{{item.goods_NAME}}</text>
+            <text class="price">￥{{item.retail_PRICE}}</text>
+            <view class="selnum" wx:if="{{item.status == 1}}">
+              <view class="add" catchtap="addNumber" data-item-index="{{index}}">+</view>
+              <input value="{{item.number}}" class="number" disabled="true" type="number" />
+              <view class="cut" catchtap="cutNumber" data-item-index="{{index}}">-</view>
+            </view>
+            <view class='foundLike' wx:if="{{item.status == 0}}" catchtap='toIndexPage'>找相似</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="cart-bottom">
+      <view class="checkbox {{checkedAllStatus ? 'checked' : ''}}" bindtap="checkedAll">全选({{cartTotal.checkNum}})</view>
+      <view class="total">{{!isEditCart ? '￥'+cartTotal.checkAmount : ''}}</view>
+      <view class="checkout" bindtap="deleteCart" wx:if="{{isEditCart}}">删除所选</view>
+      <view class="checkout" bindtap="checkoutOrder" wx:if="{{!isEditCart}}">下单</view>
+    </view>
+  </view>
+</view>

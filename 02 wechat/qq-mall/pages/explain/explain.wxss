@@ -1,0 +1,22 @@
+.caption {
+  font-size: 30rpx;
+  color: #333;
+  margin-top: 30rpx;
+  width: 96%;
+  text-align: left;
+  padding-left: 30rpx;
+}
+
+.content {
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 20rpx;
+  width: 92%;
+  text-align: left;
+  padding: 0 30rpx;
+}
+
+.rT {
+  width: 100%;
+  height: auto;
+}

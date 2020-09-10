@@ -1,0 +1,26 @@
+<view class="container" >
+   <view class='navBox'>
+    <view class='nav {{thisType == "-100" ? "active" : ""}}' catchtap='getThisList' data-type="-100">全部</view>
+    <view class='nav {{thisType == "0" ? "active" : ""}}' catchtap='getThisList' data-type="0">已审核</view>
+    <view class='nav {{thisType == "3" ? "active" : ""}}' catchtap='getThisList' data-type="3">未审核</view>
+  </view>
+<view wx:for="{{list}}" wx:for-item="ind" wx:for-index="id" class="context">
+ <view class="info">
+ <view class="v1">
+<text>会员提现{{'\n'}}</text>  
+<text>{{list[id].clearing_TIME}}</text> 
+ </view>
+ <view class="v2">
+ <text class="c1" wx:if="{{list[id].status==0}}">{{list[id].clearing}}{{'\n'}}</text>
+  <text class="v3" wx:else>{{list[id].clearing}}{{'\n'}}</text>
+ <text style="color=red" class="c1" wx:if="{{list[id].status==0}}">待审核{{'\n'}}</text>
+<text style="color=red" class="v3" wx:else>已审核{{'\n'}}</text>
+ <button size="mini" >提现</button>
+ </view>
+ </view>
+ </view>
+  <view class='footer'>
+  <view  class="version" >该界面只为商家开放</view>
+  </view>
+</view>
+       

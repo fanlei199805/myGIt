@@ -1,0 +1,202 @@
+page {
+  background: #f6f6f6;
+}
+
+.h84 {
+  height: 84rpx;
+}
+
+.h120 {
+  height: 120rpx;
+}
+
+.address-box {
+  width: 100%;
+  background: #fff;
+}
+
+.address-item {
+  height: 120rpx;
+  position: relative;
+}
+
+.address-empty {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  align-items: center;
+}
+
+.address-empty .m {
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 29rpx;
+}
+
+.address-empty image {
+  width: 13rpx;
+  height: 26rpx;
+  margin-top: 29rpx;
+}
+
+.address-item .l {
+  height: 30rpx;
+  line-height: 30rpx;
+  position: absolute;
+  top: 26rpx;
+  left: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.l .name {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.l .mobile {
+  font-size: 28rpx;
+  color: #333;
+  margin-left: 17rpx;
+}
+
+.l .default {
+  margin-left: 10rpx;
+  width: 64rpx;
+  height: 30rpx;
+}
+
+.address-item .m {
+  flex: 1;
+  font-size: 26rpx;
+  color: #666;
+  position: absolute;
+  bottom: 21rpx;
+  left: 30rpx;
+}
+
+.address-item .r {
+  width: 13rpx;
+  height: 25rpx;
+  position: absolute;
+  bottom: 48rpx;
+  right: 31rpx;
+}
+
+.order-box {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+}
+
+.order-item {
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+}
+
+.order-item .l {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.order-item .r {
+  font-size: 28rpx;
+  color: #FB0202;
+}
+
+.goods-items {
+  margin-top: 20rpx;
+  width: 100%;
+  background: #fff;
+  padding-bottom: 29rpx;
+}
+
+.detailText {
+  width: 100%;
+  height: 82rpx;
+  line-height: 82rpx;
+  padding-left: 30rpx;
+  font-size: 28rpx;
+  color: #333;
+  border-bottom: 1rpx #E7E7E7 solid;
+}
+
+.goods-items .item {
+  width: 100%;
+  height: 146rpx;
+  margin-top: 29rpx;
+  position: relative;
+}
+
+.item image {
+  width: 144rpx;
+  height: 146rpx;
+  position: absolute;
+  top: 0;
+  left: 30rpx;
+}
+
+.item .name {
+  width: 47.5%;
+  height: 68rpx;
+  font-size: 24rpx;
+  color: #333;
+  position: absolute;
+  top: 8rpx;
+  left: 191rpx;
+}
+
+.item .b {
+  font-size: 26rpx;
+  color: #333;
+  position: absolute;
+  top: 8rpx;
+  right: 32rpx;
+}
+
+.item .number {
+  font-size: 26rpx;
+  color: #666;
+  position: absolute;
+  top: 61rpx;
+  right: 32rpx;
+}
+
+.order-total {
+  position: fixed;
+  left:0;
+  bottom: 0;
+  height: 96rpx;
+  width: 100%;
+  display: flex;
+}
+
+.order-total .l {
+  flex: 1;
+  height: 96rpx;
+  line-height: 96rpx;
+  color: #333;
+  background: #fff;
+  font-size: 30rpx;
+  padding-left: 30rpx;
+}
+
+.priceTotal {
+  color: #FB0202;
+}
+
+.order-total .r{
+  width: 249rpx;
+  height: 96rpx;
+  background: #FF5B34;
+  line-height: 96rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+}

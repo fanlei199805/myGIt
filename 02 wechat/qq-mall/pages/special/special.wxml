@@ -1,0 +1,9 @@
+<view class="container">
+  <view class='listBox'>
+    <navigator url="../specialDetail/specialDetail?id={{item.n_ID}}" class="list" wx:for="{{dataList}}" wx:key="{{item.n_ID}}">
+      <image class='listImg' src='{{item.scene_PIC_URL}}'></image>
+      <text class='listName'>{{item.title}}</text>
+      <text class='listDesc'>{{item.subtitle}}</text>
+    </navigator>
+  </view>
+</view>

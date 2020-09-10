@@ -1,0 +1,163 @@
+page {
+  background: #f8f8f8;
+}
+
+.collect-list {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 10rpx;
+  margin-bottom: 100rpx;
+}
+
+.item {
+  width: 100%;
+  height: 200rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.item .img {
+  width: 144rpx;
+  height: 144rpx;
+  margin-left: 38rpx;
+}
+
+.item .info{
+  width: 66.666667%;
+  height: 144rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 16rpx;
+}
+
+.item .info .name{
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #4a4a4a;
+}
+
+.item .info .price {
+  margin-top: 19rpx;
+  font-size: 32rpx;
+  color: #FA0201;
+  line-height: 40rpx;
+}
+
+.checkbox {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 30rpx;
+  background: url(http://sms.houhan.com/duanyu_icon/checkIcon.png) no-repeat;
+  background-size: 32rpx;
+}
+
+.checkbox.checked {
+  background: url(http://sms.houhan.com/duanyu_icon/checkedIcon.png) no-repeat;
+  background-size: 32rpx;
+}
+
+.itemLose {
+  width: 100%;
+  height: 200rpx;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.itemLose .img {
+  width: 144rpx;
+  height: 144rpx;
+  margin-left: 10rpx;
+  background: #fff;
+}
+
+.itemLose .info {
+  width: 66.666667%;
+  height: 144rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 16rpx;
+}
+
+.itemLose .info .name {
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #9b9b9b;
+}
+
+.itemLose .info .price{
+  margin-top: 19rpx;
+  font-size: 32rpx;
+  color: #9b9b9b;
+  line-height: 40rpx;
+}
+
+.itemLose .lookAgain {
+  width: 160rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  border: 1rpx #FF5B34 solid;
+  font-size: 28rpx;
+  color: #FF5B34;
+  position: absolute;
+  right: 116rpx;
+  bottom: 20rpx;
+}
+
+.itemLose .delThis {
+  font-size: 28rpx;
+  color: #000;
+  position: absolute;
+  right: 30rpx;
+  bottom: 25rpx;
+}
+
+.loseTip {
+  width: 70rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border-radius: 25rpx;
+  background: #dadada;
+  font-size: 22rpx;
+  color: #9b9b9b;
+  margin-left: 20rpx;
+}
+
+.footer {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer .checkbox {
+  width: auto;
+  line-height: 32rpx;
+  padding-left: 56rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.del {
+  width: 250rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: #FF5B34;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+}

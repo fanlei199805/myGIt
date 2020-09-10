@@ -1,0 +1,248 @@
+page {
+  background: #f6f6f6;
+}
+
+.no-cart{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noCartTop {
+  width: 100%;
+  height: 80rpx;
+}
+
+.services {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.servicesItem {
+  background: url(http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/servicePolicyRed-518d32d74b.png) 0 center no-repeat;
+  background-size: 10rpx;
+  padding-left: 15rpx;
+  font-size: 25rpx;
+  color: #666;
+  flex: 1;
+  margin-left: 60rpx;
+}
+
+.bigCar {
+  width: 206rpx;
+  height: 192rpx;
+  margin: 125rpx auto 0 auto;
+}
+
+.title-box {
+  width: 100%;
+  text-align: center;
+  font-size:26rpx;
+  color:#969494;
+  margin-top: 42rpx;
+}
+
+.to-index-btn{
+  color:#fff;
+  background:#FF5B34;
+  border-radius:4rpx;
+  width:206rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size:26rpx;
+  margin-top: 39rpx;
+  display: block;
+}
+
+.cart-view{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.allGoods {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background: #fff;
+}
+
+.checkbox{
+  height: 32rpx;
+  padding-left: 50rpx;
+  padding-top: 2rpx;
+  margin-left: 30rpx;
+  line-height: 32rpx;
+  background: url(http://sms.houhan.com/duanyu_icon/checkIcon.png) no-repeat;
+  background-size: 32rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.checkbox.checked{
+  background: url(http://sms.houhan.com/duanyu_icon/checkedIcon.png) no-repeat;
+  background-size: 32rpx;
+}
+
+.allGoodsEdit {
+  font-size: 28rpx;
+  color: #999;
+  margin-right: 30rpx;
+}
+
+.list {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 98rpx;
+  background: #fff;
+}
+
+.group-item {
+  width: 100%;
+  height: auto;
+}
+
+.item {
+  width: 100%;
+  height: 200rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.item .checkbox {
+  width: 108rpx;
+  height: 100%;
+  position: absolute;
+  padding: 0;
+  margin-left: 0;
+  background-position: center;
+}
+
+.item .img {
+  position: absolute;
+  top: 27rpx;
+  left: 108rpx;
+  width: 144rpx;
+  height:146rpx;
+}
+
+.item .name {
+  position: absolute;
+  top: 30rpx;
+  left: 278rpx;
+  max-width: 51.333333;
+  font-size: 26rpx;
+  color: #333;
+  height: 68rpx;
+  padding-right: 30rpx;
+}
+
+.item .price {
+  position: absolute;
+  top: 122rpx;
+  left: 277rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #FA0201;
+}
+
+.item .selnum {
+  width: 234rpx;
+  height: 62rpx;
+  border: 2rpx solid #eee;
+  border-radius: 4rpx;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 43rpx;
+  right: 30rpx; 
+  display: flex;
+  font-size: 30rpx;
+  color: #666;
+  line-height: 62rpx;
+}
+
+.selnum .add {
+  width: 80rpx;
+  height: 100%;
+  text-align: center;
+}
+
+.selnum .cut {
+  width: 80rpx;
+  height: 100%;
+  text-align: center;
+}
+
+.selnum .number {
+  flex: 1;
+  height: 100%;
+  text-align: center;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  z-index: 10;
+}
+
+.item .loseTip {
+  width: 74rpx;
+  height: 34rpx;
+  position: absolute;
+  top: 99rpx;
+  left: 30rpx;
+}
+
+.item .foundLike {
+  width: 180rpx;
+  height: 58rpx;
+  text-align: center;
+  line-height: 58rpx;
+  border-radius: 4rpx;
+  border: 1rpx #FF5B34 solid;
+  font-size: 28rpx;
+  color: #FF5B34;
+  position: absolute;
+  right: 30rpx;
+  bottom: 46rpx;
+}
+
+.cart-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 98rpx;
+  background: #fff;
+  display: flex;
+  z-index: 20;
+}
+
+.cart-bottom .checkbox {
+  margin-top: 33rpx;
+}
+
+.cart-bottom .total {
+  height: 32rpx;
+  flex: 1;
+  margin: 33rpx 30rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.cart-bottom .checkout {
+  width: 250rpx;
+  height: 98rpx;
+  text-align: center;
+  line-height: 98rpx;
+  font-size: 32rpx;
+  background: #FB0202;
+  color: #fff;
+}

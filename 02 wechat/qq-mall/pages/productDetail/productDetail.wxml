@@ -1,0 +1,146 @@
+<view class="container">
+  <view class="swiper">
+    <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500" circular="true">
+      <swiper-item wx:for="{{detailData.nideshopGoodsShufflingVoList}}">
+        <image class="bannerImg" src="{{item.imgUrl}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </swiper>
+    <!-- <image class="bannerImg" src="{{detailData.listPicUrl}}" mode="scaleToFill"></image> -->
+  </view>
+  <view class="services">
+    <view class="servicesItem">{{servers.firstField}}</view>
+    <view class="servicesItem">{{servers.secondField}}</view>
+    <view class="servicesItem">{{servers.thirdField}}</view>
+  </view>
+  <view class='productInfo'>
+    <text class="infoName noline">{{detailData.name}}</text>
+    <text class="infoOldPrize">{{detailData.goodsBrief}}</text>
+    <text class="infoPrize">￥{{detailData.retailPrice}}</text>
+  </view>
+  <view class='plzChoosePar' bindtap='showStandard'>
+    <text>请选择规格数量</text>
+    <image src='../../static/img/right.png'></image>
+  </view>
+  <view class="h20"></view>
+  <view class='productPar'>
+    <text class='productParCap'>商品参数</text>
+    <view class='parsBox'>
+      <!-- <text class='parName'>价值说明</text>
+      <text class='parDesc'>储油价值均价以该卡制作时挂牌油价为准储油价值均价以该卡制作时挂牌油价为准储油价值均价以该卡制作时挂牌油价为准储油价值均价以该卡制作时挂牌油价为准</text> -->
+      <rich-text nodes="{{contents}}"></rich-text>
+    </view>
+  </view>
+  <view class="h10"></view>
+  <view class='commentCap'>
+    <text>精选留言</text>
+    <image src='../../static/img/edit2.png' bindtap="postComment"></image>
+  </view>
+  <view class='commentBox'>
+
+    <view class="has-comments" wx:if="{{commentList.length > 0 }}">
+      <view class="b">
+        <view class="item" wx:for="{{commentList}}" data-id='{{item.nId}}' data-name='{{item.nickname}}' bindtap="commentInfo">
+          <view class="info">
+            <view class="user" >
+              <image class="avatar" src="{{item.avatar}}"></image>
+              <text class="nickname">{{item.nickname}}</text>
+            </view>
+            <view class="time">{{item.addTime}}</view>
+          </view>
+          <view class="comment">
+            {{item.content}}
+          </view>
+
+        </view>
+      </view> 
+      </view> 
+      <view class="load" wx:if="{{commentList.length > 2}}">
+        <navigator url="/pages/topicComment/topicComment?valueId={{id}}&type=1">查看更多</navigator>
+      </view>
+        <view class="no-comments" wx:if="{{commentList.length <= 0}}">
+        <view class="b">    
+            <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/no-comment-560f87660a.png"></image>
+            <text class="txt">等你来留言</text>
+        </view>
+    </view>
+  </view>
+  <view class='allLook'>
+    <text class='allLookText'>大家都在看</text>
+    <newProductComponent class="allLookList"   dataList="{{allLook}}"></newProductComponent>
+  </view>
+
+  <view class='h140'></view>
+  <view class='standard' hidden='{{standard}}'>
+    <view class='addInfo'>
+      <image class='addLogo' src='{{detailData.primaryPicUrl}}' mode='aspectFit'></image>
+      <text class='noline2'>{{detailData.name}}</text>
+      <image class='close' src='../../static/img/close.png' bindtap='closeStandard'></image>
+    </view>
+    
+    <text class='buyNumber'>数量</text>
+    <view class='addMius'>
+      <view class='add' bindtap='addNumber'>+</view>
+      <view class='number'>{{buyNumber}}</view>
+      <view class='mius' bindtap='miusNumber'>-</view>
+    </view>
+  </view>
+  <view class='sendComment' wx:if="{{showComment}}">
+    <view class="sendCTop">
+      <view>0/200</view>
+      <text>发送</text>
+    </view>
+    <textarea class='commentC' placeholder='优质内容将在前排展示~' placeholder-style='color: #9B9B9B;'></textarea>
+  </view>
+
+<view class="imagesize" wx:if="{{showModalStatus}}">
+  <image src="{{url}}">  </image>
+</view>
+ <!--屏幕背景变暗的背景 -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}">
+</view>
+<!--弹出框 -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class='share'>
+    <button class="sharebutton" open-type="share">
+         <image src='../../static/img/shareweixin.png'></image>
+    </button>
+      <text>分享</text>
+    </view>
+    <view class="gekai">
+    </view>
+    <!-- 下载图片按钮 -->
+    <view class='share'  catchtap='downloadImg'>
+     <button class="sharebutton">
+      <image src='../../static/img/download.png'></image>
+      </button>
+      <text>下载</text>
+    </view>
+</view>
+
+ <!-- <view class="main">
+    <view class="item item1">1</view>
+    <view class="item item2">2</view>
+    <view class="item item3">3</view>
+  </view> -->
+  <view class='footer'>
+    <view class='home' bindtap='addCollect'>
+      <image src='{{collect ? collectedIcon : collectIcon}}'></image>
+      <text>{{collect ? '已收藏' : '收藏'}}</text>
+    </view>
+    <view class='shoppingCar' bindtap='gotoCar'>
+      <image src='../../static/img/shoppingCar.png'></image>
+      <text>购物车</text>
+    </view>
+        <view class='shoppingCar'  bindtap="addCar">
+      <image src='../../static/img/share.png'></image>
+      <text>加入购物车</text>
+    </view>
+    <view class='addCar' bindtap='showModal'>
+      <text>分享赚钱</text>
+    </view>
+    <view class='buy' bindtap='buyNow'>
+      <text>立即购买</text>
+    </view>
+  </view>
+</view>
+<view class="bg-mask" bindtap="cancelComment" wx:if="{{showComment}}"></view>

@@ -1,0 +1,67 @@
+
+<view class="container">
+<view  class='list-msg1'>
+<view  class='list-msg2' bindtap='bindShowMsg'>
+ <image src='../../static/img/home1.png'  class='com-sIm1'></image>
+<text class='left' >{{orgName}}
+</text>
+</view>
+  <view class="search">
+    <navigator url="/pages/search/search" class="input">
+      <image class="icon"></image>
+      <!-- <text class="txt">商品搜索, 共{{goodsCount}}款好物</text> -->
+      <text class="txt">商品搜索</text>
+    </navigator>
+  </view>
+</view>
+  <view class="swiper">
+    <swiper autoplay="true" interval="5000" duration="500" circular="true">
+      <swiper-item wx:for="{{banner}}" wx:key="{{item.nId}}" data-id="{{item.productId}}" data-name="{{item.productOrgId}}" bindtap="gotoProductDetail">
+        <navigator>
+          <image class="bannerImg" src="{{item.imageUrl}}" mode="scaleToFill"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- <view class="advantage">
+    <image class="advantageText" src="../../static/img/advantage_text.png"></image>
+    <view class="advantages">
+      <view class="adv" wx:for="{{advantage}}" wx:key="{{item.id}}">
+        <image class="advImg" src="{{item.url}}"></image>
+        <text class="advText">{{item.name}}</text>
+      </view>
+    </view>
+    <navigator url='/pages/explain/explain'>
+      <image class="userExplain" src="../../static/img/explain.png"></image>
+    </navigator>
+  </view> -->
+  <view class="h20"></view>
+  <view class="newProduct">
+    <view class="newProductCaption">
+      <image class="newIcon" src="../../static/img/newProductIcon.png"></image>
+      <text class="newText">新品首发</text>
+    </view>
+    <newProductComponent dataList="{{newsList}}"></newProductComponent>
+  </view>
+  <view class="h20"></view>
+  <view class="hotProduct">
+    <view class="hotProductCaption">
+      <image class="hotIcon" src="../../static/img/hotProductIcon.png"></image>
+      <text class="hotText">人气推荐</text>
+    </view>
+    <view class="hotProductBox">
+      <view class="hotList" wx:for="{{hotList}}" data-id="{{item.nId}}" data-name="{{item.orgId}}"  bindtap="gotoProductDetail">
+
+        <image class="hotListIcon" src='{{item.primaryPicUrl}}' mode='aspectFit'></image>
+        <view class="rightContent">
+          <text class="hotListName noline2">{{item.name}}</text>
+          <text class="hotListOldPrize">{{item.goodsBrief}}</text>
+          <text class="hotListPrize">￥{{item.retailPrice}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="noMore">
+      <text class="noMoreText">已经没有更多了~</text>
+    </view>
+  </view>
+</view>

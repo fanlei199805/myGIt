@@ -1,0 +1,97 @@
+<view class="container">
+  <view class='banner'>
+    <image class='userHead' src='{{ userInfo.avatarUrl ? userInfo.avatarUrl : userHead}}'></image>
+    <view class='midBox'>
+      <text class='username' bindtap="goLogin">{{ userInfo.nickName ? userInfo.nickName : '点击登录' }}</text>
+      <text class='sdl' wx:if="{{ !userInfo.nickName }}">1秒登录，查看更多</text>
+      <view class='ykyh' wx:if="{{ userInfo.nickName }}">
+        <image src='../../../static/img/logo.png'></image>
+        <text>普通用户</text>
+      </view>
+    </view>
+    <text class='logout' bindtap="exitLogin" wx:if="{{token}}">退出登录</text>
+  </view>
+ <view class="focuswx">
+    <view class='focusBox' wx:if="{{!focusSuccess}}">
+      <image class='logo' src='../../../static/img/logo.png'></image>
+      <text class='focusText1'>51惠购关联的公众号</text>
+      <text class='focusText2'>51惠购</text>
+      <text class='focusText3'>折得多，省得多</text>
+      <view class="focusbtn">立即关注</view>
+    </view>
+    <view class="wxFocus">
+      <official-account bindload="loadSuccess" binderror="loadError"></official-account>
+    </view>
+  </view>  
+  <view class="user-menu">
+    <view class="item">
+      <navigator url="{{token ? '/pages/ucenter/order/order' : '/pages/auth/btnAuth/btnAuth?id=3'}}" class="a">
+        <image src='../../../static/img/form.png'></image>
+        <text class="txt">我的订单</text>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="{{token ? '/pages/ucenter/collect/collect' : '/pages/auth/btnAuth/btnAuth?id=3'}}" class="a">
+        <image src='../../../static/img/favor.png'></image>
+        <text class="txt">我的收藏</text>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="{{token ? '/pages/ucenter/address/address' : '/pages/auth/btnAuth/btnAuth?id=3'}}" class="a">
+        <image src='../../../static/img/location.png'></image>
+        <text class="txt">地址管理</text>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="/pages/ucenter/help/help" class="a">
+        <image src='../../../static/img/question.png'></image>
+        <text class="txt">帮助中心</text>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="{{token ? '/pages/ucenter/feedback/feedback' : '/pages/auth/btnAuth/btnAuth?id=3'}}" class="a">
+        <image src='../../../static/img/edit.png'></image>
+        <text class="txt">意见反馈</text>
+      </navigator>
+    </view>
+    <button class='service' open-type="contact">
+      <view class="item">
+        <navigator url="url" class="a">
+          <image src='../../../static/img/service.png'></image>
+          <text class="txt">联系客服</text>
+        </navigator>
+      </view>
+    </button>
+
+    <view class="item">
+      <navigator url="{{token ? '/pages/ucenter/involved/involved' : '/pages/auth/btnAuth/btnAuth?id=3'}}" class="a">
+        <image src='../../../static/img/vote.png'></image>
+        <text class="txt">投票</text>
+      </navigator>
+    </view>
+    <view class="item">
+      <navigator url="{{token ? '/pages/businessManage/business/business' : '/pages/auth/btnAuth/btnAuth?id=3'}}" class="a">
+        <image src='../../../static/img/edit1.png'></image>
+        <text class="txt">商家管理</text>
+      </navigator>
+    </view>
+
+     <view class="item">
+          <navigator url="{{token ? '/pages/businessManage/business/business' : '/pages/auth/btnAuth/btnAuth?id=3'}}" class="a">
+            <image src='../../../static/img/edit1.png'></image>
+            <text class="txt">分销人管理</text>
+          </navigator>
+        </view>
+
+<!-- 
+        <view class="item">
+      <navigator url="{{token ? '/pages/topicRedact/topicRedact' : '/pages/auth/btnAuth/btnAuth?id=3'}}" class="a">
+        <image src='../../../static/img/vote.png'></image>
+        <text class="txt">资讯发布</text>
+      </navigator>
+    </view> -->
+  </view>
+  <view class='footer'>
+  <view class="version">版本：1.0.0.3</view>
+  </view>
+</view>

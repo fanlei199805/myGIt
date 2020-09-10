@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="collect-list">
+    <view class="{{item.isOnSale == 2 ? 'item' : 'itemLose'}}" catchtap="{{item.isOnSale == 2 ? 'gotoProductDetail' : ''}}"  wx:for="{{collectList}}" wx:key="{{item.msgId}}" data-id="{{item.nId}}">
+      <view class="checkbox {{item.checked ? 'checked' : ''}}" catchtap="checkedItem" data-item-index="{{index}}" wx:if="{{item.isOnSale == 2}}"></view>
+      <view class='loseTip' wx:if="{{item.isOnSale == 3}}">失效</view>
+      <image class="img" src="{{item.primaryPicUrl}}" mode='aspectFit'></image>
+      <view class='info'>
+        <view class="name noline2">{{item.name}}</view>
+        <view class="price">￥{{item.retailPrice}}</view>
+      </view>
+      <view class='lookAgain' wx:if="{{item.isOnSale == 3}}" catchtap='toIndexPage'>重新逛逛</view>
+      <text class='delThis' wx:if="{{item.isOnSale == 3}}" data-id='{{item.msgId}}' catchtap='delCollect'>删除</text>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class="checkbox {{allChecked ? 'checked' : ''}}" bindtap="checkedAll">全部</view>
+    <view class='del' bindtap='cancelCollect'>删除</view>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+page {
+  background: #F8F8F8;
+}
+
+.list-group {
+  width: 100%;
+  margin-top: 7rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-cell {
+  width: 92%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30rpx;
+}
+
+.list-label {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #000;
+}
+
+.right {
+  width: 17rpx;
+  height: 30rpx;
+}

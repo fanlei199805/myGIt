@@ -1,0 +1,56 @@
+<view class="container">
+  <!-- <video class='video' src='https://ugcws.video.gtimg.com/uwMROfz0r5zCYaQXGdGnC2dfJ7zToni55bZCznaFStUspigm/s05484avy21.p712.1.mp4?sdtfrom=v1010&guid=c498d723962ca3ae92f7f608e557c609&vkey=99F6A130044E74533EEB81CE1662E67F1080789CB3593BEBD1835B184B57389D4B3BB13B6D74E8E50BAA39CBE2EDBFA9BF55B738847167F3FF96D8C5F4F02A1F53F2C69948C4D58DCDE2218A42E88EC8E30644F7D690AD49408AE5F5961779D85050F45ED83EC809C65088213D70EDC0A196CE8D86742106'></video> -->
+ 
+ <!-- 头部 图文 广告插件 -->
+  <!-- <ad unit-id="adunit-f6bd8d67ef0a8ac0"></ad> -->
+
+<!--文档区域 -->
+  <rich-text class='richText' type='node' space='ensp' nodes="{{contents}}"></rich-text>
+
+ <!-- 底部 视频 广告插件 -->
+<ad unit-id="adunit-c1bd213b075df951" ad-type="video" ad-theme="white"></ad>
+
+  <view class='commentCap'>
+    <text>精选留言</text>
+    <image src='../../static/img/edit2.png' bindtap="postComment"></image>
+  </view>
+  <view class='commentBox'>
+
+    <view class="has-comments" wx:if="{{commentList.length > 0 }}">
+      <view class="b">
+        <view class="item" wx:for="{{commentList}}" data-id='{{item.nId}}' data-name='{{item.nickname}}' bindtap="commentInfo">
+          <view class="info">
+            <view class="user" >
+              <image class="avatar" src="{{item.avatar}}"></image>
+              <text class="nickname">{{item.nickname}}</text>
+            </view>
+            <view class="time">{{item.addTime}}</view>
+          </view>
+          <view class="comment">
+            {{item.content}}
+          </view>
+
+        </view>
+      </view> 
+      </view> 
+      <view class="load" wx:if="{{commentList.length > 6}}">
+        <navigator url="/pages/topicComment/topicComment?valueId={{detailId}}&type=0">查看更多</navigator>
+      </view>
+        <view class="no-comments" wx:if="{{commentList.length <= 0}}">
+        <view class="b">    
+            <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/no-comment-560f87660a.png"></image>
+            <text class="txt">等你来留言</text>
+        </view>
+    </view>
+  </view>
+    <view  >
+    <!-- 广告插件 -->
+    <ad unit-id="adunit-3a0f15f4e907a9f2" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white"></ad>
+  </view>
+
+  <view class="noMore">
+    <text class="noMoreText">已经没有更多了~</text>
+  </view>
+
+</view>
+<view class="bg-mask" bindtap="cancelComment" wx:if="{{openComment}}"></view>

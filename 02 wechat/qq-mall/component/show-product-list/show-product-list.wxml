@@ -1,0 +1,7 @@
+<view class="productBox">
+  <view class="list" wx:for="{{dataList}}" wx:key="{{item.nId}}" data-id="{{item.nId}}" data-name="{{item.orgId}}" bindtap="gotoProductDetail">
+    <image class="listIcon" src='{{item.primaryPicUrl}}' mode='aspectFit'></image>
+    <text class="listName">{{item.name}}</text>
+    <text class="listPrize">￥{{item.retailPrice}}</text>
+  </view>
+</view>

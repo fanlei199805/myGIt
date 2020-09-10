@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="pay-result">
+    <view class="success" wx:if="{{status}}">
+      <image src='../../static/img/paySuccess.png'></image>
+      <view class="msg">付款成功</view>
+      <view class="tips">您的订单会尽快处理</view>
+      <view class="btns">
+        <navigator class="btn btnColor1" url="/pages/ucenter/order/order" open-type="redirect">查看订单</navigator>
+        <navigator class="btn btnColor2" url="/pages/index/index" open-type="switchTab">返回首页</navigator>
+      </view>
+    </view>
+    <view class="error" wx:if="{{!status}}">
+      <image src='../../static/img/payFail.png'></image>
+      <view class="msg">付款失败</view>
+      <!-- <view class="tips">订单超时将自动关闭</view> -->
+      <view class="btns">
+        <navigator class="btn btnColor1" url="/pages/ucenter/order/order" open-type="redirect">查看订单</navigator>
+        <view class="btn btnColor2" bindtap='payOrder'>重新付款</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,213 @@
+page {
+  background: #F8F8F8;
+}
+
+.banner {
+  width: 100%;
+  height: 240rpx;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.userHead {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-left: 30rpx;
+  margin-top: 60rpx;
+}
+
+.midBox {
+  flex: 1;
+  margin-left: 20rpx;
+  margin-top: 60rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.logout {
+  flex: 1;
+  font-size: 28rpx;
+  color: #9B9B9B;
+  text-decoration: underline;
+  margin-top: 67rpx;
+}
+
+.username {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #000;
+}
+
+.sdl {
+  font-size: 32rpx;
+  color: #4a4a4a;
+}
+
+.ykyh {
+  width: 200rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 25rpx;
+  background: #FFECE7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rpx;
+}
+
+.ykyh image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 24rpx;
+}
+
+.ykyh text {
+  margin-right: 22rpx;
+  font-size: 28rpx;
+  color: #FF623D;
+}
+
+.focuswx {
+  width: 100%;
+  height: 200rpx;
+  background: #fff;
+  margin-top: 5rpx;
+}
+
+.wxFocus {
+  width: 92%;
+  height: 168rpx;
+  margin: 26rpx auto;
+}
+
+.focusBox {
+  width: 92%;
+  height: 160rpx;
+  border-radius: 10rpx;
+  border: 1rpx #C9C9C9 solid;
+  position: relative;
+  margin: 30rpx auto;
+}
+
+.logo {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 60rpx;
+  left: 30rpx;
+}
+
+.focusText1 {
+  font-size: 24rpx;
+  color: #9B9B9B;
+  position: absolute;
+  top: 15rpx;
+  left: 30rpx;
+}
+
+.focusText2 {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #000;
+  position: absolute;
+  top: 60rpx;
+  left: 139rpx;
+}
+
+.focusText3 {
+  font-size: 28rpx;
+  color: #4A4A4A;
+  position: absolute;
+  top: 105rpx;
+  left: 139rpx;
+}
+
+.focusbtn {
+  width: 140rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  border: 1rpx #44B343 solid;
+  font-size: 28rpx;
+  color: #44B343;
+  position: absolute;
+  top: 50rpx;
+  right: 30rpx;
+}
+
+.user-menu {
+  width: 100%;
+  height: 540rpx;
+  background: #fff;
+  margin-top: 5rpx;
+}
+
+.user-menu .item {
+  float: left;
+  width: 33.333333333%;
+  height: 180rpx;
+  text-align: center;
+}
+
+.item .a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.a image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.user-menu .txt {
+  display: block;
+  font-size: 24rpx;
+  color:#000;
+}
+
+.service {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: left;
+  line-height: normal;
+  display: inline;
+}
+
+.footer {
+  width: 100%;
+  height: 145rpx;
+  background: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.company {
+  font-family: STXingkai;
+  font-size:20rpx;
+  text-align:center;
+  color: #9B9B9B;
+  margin-top: 20rpx;
+}
+
+.version {
+  font-family: STXingkai;
+  font-size:20rpx;
+  text-align:center;
+  color: #9B9B9B;
+  margin-top: 15rpx;
+}

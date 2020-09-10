@@ -1,0 +1,5 @@
+<view class="container">
+  <!-- <view class='caption'>价值说明</view>
+  <text class='content'>储油价值均价以该卡制作时挂牌油价为准储油价值均价以该卡制作时挂牌油价为准储油价值均价以该卡制作时挂牌油价为准储油价值均价以该卡制作时挂牌油价为准</text> -->
+  <rich-text class='rT' nodes="{{info}}"></rich-text>
+</view>

@@ -1,0 +1,25 @@
+<view class="container">
+ 
+ 
+  <view class="user-menu">
+    
+
+   
+    <view class="item">
+      <navigator url="{{token ? '/pages/businessManage/verify/verify' : '/pages/auth/btnAuth/btnAuth?id=3'}}" class="a">
+        <image src='../../../static/img/edit1.png'></image>
+        <text class="txt" >消费验证</text>
+      </navigator>
+    </view>
+
+    <view class="item">
+      <navigator url="{{token ? '/pages/businessManage/extract/extract' : '/pages/auth/btnAuth/btnAuth?id=3'}}" class="a">
+        <image src='../../../static/img/vote.png'></image>
+        <text class="txt">商家提现</text>
+      </navigator>
+    </view> 
+  </view>
+  <view class='footer'>
+  <view  class="version" >该界面只为商家开放</view>
+  </view>
+</view>
